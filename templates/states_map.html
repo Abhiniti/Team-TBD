@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>States_DrugOD_Deaths</title>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+  integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+  crossorigin=""></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- Fonts -->
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script> 
+
+	<link rel="stylesheet" href="../static/css/styles.css">
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="../static/css/stateStyle.css">
+</head>
+
+<body onload="buildMap(1999)">
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" role="navigation">
+        <div class="container-fluid">
+          <a class="navbar-brand" ></a>
+          <div class="logo">
+					<a href="/index.html"><img src="../static/img/tbd-logo2.png" alt="TBD Logo"></a>
+				</div>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+    
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Visualizations
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="US_OD.html">US Overdose deaths</a>
+                      <a class="dropdown-item" href="US_OP.html">US Opioid deaths</a>
+                      <a class="dropdown-item" href="states_map.html">US Map</a>
+                      <a class="dropdown-item" href="Database.html">Raw data</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </nav>    
+
+  <!-- The div where we will inject our map -->
+<!-- 	<div class="row"> -->
+  
+  <!-- The div for the dropdown button -->
+    <div class="dropdown-state">
+    <select type="button" onchange="getData(this.value)" class="dropdown-state bg-primary">
+      <option value="Default">Select - Year</option>
+	  <option value="1999">1999</option>
+      <option value="2005">2005</option>
+      <option value="2014">2014</option>
+      <option value="2015">2015</option>
+      <option value="2016">2016</option>
+	</select>
+    </div>
+	
+	<div id="map"></div>
+	
+<!-- NEW STUFF -->
+<!-- SECTION: Visualzations -->
+	<section class="freebies has-padding" id="freebies">
+		<div class="container freebies-intro">
+			<div class="row">
+				<div class="col-md-12">
+					<h4>State-tistics</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 content-left">
+					<ul class="list-group list-group-flush" id="statesStats">
+					  <li class="list-group-item" id="statsYear"style= "font-weight: bold;">STATISTICS BY YEAR</li>
+					  <li class="list-group-item" id="greatestRate"></li>
+					  <li class="list-group-item" id="smallestRate"></li>
+					</ul>
+				</div>
+				<div class="col-md-6 content-left">
+					<ul class="list-group list-group-flush" id="statesStats">
+					  <li class="list-group-item" style= "font-weight: bold;">STATISTICS OVERALL</li>
+					  <li class="list-group-item">State with greatest change in death rate: <u>West Virginia</u></li>
+					  <li class="list-group-item">Changed from 4.1 to 52 (+47.9)</li>
+					  <li class="list-group-item">State with smallest change in death rate: <u>California</u> </li>
+					  <li class="list-group-item">Changed from 8.1 to 11.2 (+3.1)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END OF NEW STUFF -->	
+<!-- 	</div>
+	</div> -->
+  <!-- API key -->
+  <script type="text/javascript" src="../static/js/config.js"></script>
+  <!-- JS -->
+  <script src='https://leafletjs.com/examples/choropleth/us-states.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script type="text/javascript" src="../static/js/stateAbbr.js"></script>
+  <script type="text/javascript" src="../static/js/states_leaflet.js"></script>
+<!-- JS CDNs -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+	<script src="http://vjs.zencdn.net/5.4.6/video.min.js"></script>
+	<!-- jQuery local fallback -->
+	<script>
+	window.jQuery || document.write('<script src="js/min/jquery-1.11.2.min.js"><\/script>')
+	</script>
+	<!-- JS Locals -->
+	<script src="../static/js/min/bootstrap.min.js"></script>
+	<script src="../static/js/min/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	<script src="../static/js/min/retina.min.js"></script>
+	<script src="../static/js/min/jquery.waypoints.min.js"></script>
+	<script src="../static/js/min/flickity.pkgd.min.js"></script>
+	<script src="../static/js/min/scripts-min.js"></script>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+
+</body>
+
+<div id="footer">
+  <p>Team Tribbling Big Data</p>
+</div>
+
+</html>

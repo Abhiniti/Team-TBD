@@ -1,0 +1,179 @@
+/* remove default margin and padding from body 
+body {
+  padding: 0;
+  margin: 0;
+}
+*/
+/* set map, body, and html to 100% of the screen size */
+
+#map,
+body,
+html {
+	width: 1300px;
+	height: 700px;
+	margin: auto;
+	position: relative;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    text-shadow: 1px 1px 5px gray;
+}
+
+#font_blue{
+    color: navy;
+    font-weight: bold;
+    text-align: center;
+}
+
+#font_blue_just{
+    color: navy;
+    font-weight: bold;
+    text-align: justify;
+}
+
+#font_black{
+    color: black;
+    text-align: justify;
+    font-size: medium;
+}
+
+.extra_pad {
+    padding-top: 10px; 
+}
+
+.padding {
+    padding-left: 10px;
+}
+
+.padding_comp {
+    padding-left: 40px;
+}
+
+.h_comparison{
+    width: 92%;
+    position: center;
+}
+
+#footer {
+    position: fixed;
+    height: 20px;
+    bottom: 0px; 
+    text-align: center;
+    font-size: small;
+    left: 0px;
+    width: 100%;
+    color: black;
+    background-color:gainsboro;
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+    .title {
+        font-size: 200%;
+        text-shadow: 1px 1px 5px gray;
+    }
+  }
+@media (max-width: 768px) {
+    .title {
+        font-size: 150%;
+    }   
+    .padding_comp {
+        padding-left: 20px;
+    }
+}
+@media (max-width: 576px) {
+    .title {
+        font-size: 125%;
+    }   
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown-state {
+	position: relative;
+	display: block;
+	z-index: 9000;
+	margin-left: 15px;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+} 
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  float: center;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.container-fluid-state{
+	margin: auto;
+}
