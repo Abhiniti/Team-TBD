@@ -44,3 +44,8 @@ References
 1 Algren D, Monteilh C, Rubin C, et al. Fentanyl-associated fatalities among illicit drug users in Wayne County, Michigan (July 2005-May 2006). Journal Of Medical Toxicology: Official Journal of the American College Of Medical Toxicology [serial online]. March 2013; 9(1):106-115.
 
 2 Department of Justice, Drug Enforcement Administration, DEA Investigative Reporting, January 2015.
+
+------------------------------------------------------------------------------------------------------------------
+position:fixed;width:100%;height:auto;opacity:1;background-color:rgb(241, 219, 13)
+
+Opioid Epidemic published May 2, 2016 by Adam Zyglis politicalcartoons.com

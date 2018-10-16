@@ -71,8 +71,8 @@ html, body{
     font-size: small;
     left: 0px;
     width: 100%;
-    color: black;
-    background-color:gainsboro;
+    color: rgb(253, 173, 24);
+    background-color: #414A52;
 }
 
 /*---Media Queries --*/

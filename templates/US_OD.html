@@ -19,7 +19,7 @@
 </head>
 
 <body onload="build_OD_Chart()">
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" role="navigation">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" role="navigation">
         <div class="container-fluid">
           <a class="navbar-brand" ></a>
           <div class="logo">
@@ -28,7 +28,7 @@
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="collapse navbar-collapse navbar-left" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home</a>
@@ -39,8 +39,8 @@
                       Visualizations
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="US_OD.html">US Overdose deaths</a>
-                      <a class="dropdown-item" href="US_OP.html">US Opioid deaths</a>
+                      <!--<a class="dropdown-item" href="US_OD.html">US Overdose Deaths</a>-->
+                      <a class="dropdown-item" href="US_OP.html">US Opioid Deaths</a>
                       <a class="dropdown-item" href="states_map.html">US Map</a>
                       <a class="dropdown-item" href="Database.html">Raw data</a>
                     </div>
@@ -62,5 +62,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 </body>
 
-
+<div id="footer">
+    <p>Georgia Institute of Technology | Data Science and Analytics Boot Camp | October 2018</p>
+  </div>
 </html>

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Chart_2</title>
+  <title>US OP Deaths vs. OP Rate</title>
  
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -20,8 +20,8 @@
 
 </head>
 
-<body onload="build_OP_Chart()">
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" role="navigation">
+<body onload="build_OP_Chart(), build_Female_Chart(), build_Male_Chart()">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" role="navigation">
         <div class="container-fluid">
           <a class="navbar-brand" ></a>
           <div class="logo">
@@ -30,7 +30,7 @@
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="collapse navbar-collapse navbar-left" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home</a>
@@ -41,8 +41,8 @@
                       Visualizations
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="US_OD.html">US Overdose deaths</a>
-                      <a class="dropdown-item" href="US_OP.html">US Opioid deaths</a>
+                      <a class="dropdown-item" href="US_OD.html">US Overdose Deaths</a>
+                      <!--<a class="dropdown-item" href="US_OP.html">US Opioid deaths</a>-->
                       <a class="dropdown-item" href="states_map.html">US Map</a>
                       <a class="dropdown-item" href="Database.html">Raw data</a>
                     </div>
@@ -55,18 +55,47 @@
         </div>
       </nav>   
 
-
-  <div class="container">
-    <canvas id="myChart2" height=50% width=90%></canvas>
+   <div class="container">
+    <canvas id="myChart2" height=40% width=80%></canvas>
     <!--<button type="button" class="btn btn-info btn-md" onclick="M_adjust();">Male Data</button>
     <button type="button" class="btn btn-info btn-md" onclick="F_adjust();">Female Data</button>-->
   </div>
- 
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <canvas id="myChart3" height=40% width=80%></canvas>
+    <!--<button type="button" class="btn btn-info btn-md" onclick="M_adjust();">Male Data</button>
+    <button type="button" class="btn btn-info btn-md" onclick="F_adjust();">Female Data</button>-->
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <canvas id="myChart4" height=40% width=80%></canvas>
+    <!--<button type="button" class="btn btn-info btn-md" onclick="M_adjust();">Male Data</button>
+    <button type="button" class="btn btn-info btn-md" onclick="F_adjust();">Female Data</button>-->
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <p>Drug Overdose deaths includes deaths with underlying causes of unintentional drug poisoning (X40–X44), suicide drug poisoning (X60–X64), homicide drug poisoning (X85), or drug poisoning of undetermined intent (Y10–Y14), as coded in the International Classification of Diseases, 10th Revision.</p>
+    <p>Please see CDC methods for how predicted provisional counts were calculated: <a href="https://www.cdc.gov/nchs/nvss/vsrr/drug-overdose-data.htm">https://www.cdc.gov/nchs/nvss/vsrr/drug-overdose-data.htm</a></p>
+    <br>
+    <p><i>Any Opioid ICD-10 codes (T40.0-T40.4, T40.6)</i></p>
+    <p><i>Prescription Opioids ICD-10 codes (T40.2-T40.3)</i></p>
+    <p><i>Heroin ICD-10 codes (T40.1)</i></p>
+    <p><i>Other Synthetic Narcotics (other than methadone) ICD-10 code (T40.4). This category is dominated by fentanyl related overdoses.</i></p>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 </body>
 
 <div id="footer">
-  <p>Team Tribbling Big Data</p>
+  <p>Georgia Institute of Technology | Data Science and Analytics Boot Camp | October 2018</p>
 </div>
 
 </html>

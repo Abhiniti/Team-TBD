@@ -1,41 +1,11 @@
 <!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en-US">
-<style>
-#floater {
-    position: absolute;
-	top: 2000px;
-    right: 10px;
-    width: 200px;
-    height: 140px;
-    -webkit-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
-    z-index: 1;
-    border-radius: 3px 0 0 3px;
-    padding: 10px;
-    background-color: #A9A9A9;
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-}
+<!--<![endif]-->
 
-#floater a {
-	padding: 1px;
-}
-
-#floater a:hover {
-    text-decoration: underline;
-	color: white;
-}
-
-#floater a:active {
-    text-decoration: underline;
-	color: white;
-}
-
-#floater ul li{
-  margin: 10px 0;
-}
-</style>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,11 +44,14 @@
 </head>
 
 <body>
+	<!--[if lt IE 8]>
+	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
 	<div class="container-fluid">
 		<div class="row">
 			<div class="header-nav-wrapper">
 				<div class="logo">
-					<a href="/index.html"><img src="../static/img/tbd-logo2.png" alt="TBD Logo"></a>
+					<a href="/index.html"><img id="logo" src="../static/img/tbd-logo2.png" alt="TBD Logo"></a>
 				</div>
 				<div class="primary-nav-wrapper">
 					<nav>
@@ -96,7 +69,7 @@
 			</div>
 		</div>
 	</div>
-	<header class="hero">
+		<header class="hero">
 		<div class="carousel js-flickity">
 			<div class="carousel-cell" style="background-image: url(../static/img/opioid1-op.jpg);">
 				<div class="hero-bg">
@@ -117,7 +90,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="carousel-cell" style="background-image: url(../static/img/opioid-crisis.jpg);">
+			<div class="carousel-cell" style="background-image: url(../static/img/bigdata.jpg);">
 				<div class="hero-bg">
 					<div class="container">
 						<div class="row">
@@ -145,26 +118,23 @@
 						</div>
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2 hero-intro-text wp3">
-								<p>Get to know the indivduals that makes up the team.</p>
+								<p>Get to know the indivduals that makes up our team.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class='mouse-container1'>
-				<div class='mouse' id="floater">
-						<ul>
-							<li><a href="#intro">THE BACK STORY</a></li>
-							<li><a href="#ourstory">OUR PURPOSE</a></li>
-							<li><a href="#graphs">VISUALIZATIONS</a></li>
-							<li><a href="#team">OUR TEAM</a></li>
-						</ul>
+		<div class='mouse-container'>
+			<a href="#intro">
+				<div class='mouse'>
+					<span class='scroll-down'></span>
 				</div>
+			</a>
 		</div>
 	</header>
-	
-	<!-- SECTION: Intro -->
+
+	<!-- SECTION: Back Story -->
 	<section class="collective has-padding" id="intro">
 		<div class="container">
 			<div class="row">
@@ -179,18 +149,19 @@
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/yA-16xlaCuY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 						
 					</div>
-					<p>The Council of Economic Advisers to the White House (CEA) estimates that in 2015, the economic cost of the opioid crisis was $504.0 billion*, or 2.8 percent of GDP that year. This is over six times larger than the most recently estimated economic cost of the epidemic.</p>
+					<p>The <a href="https://www.whitehouse.gov/sites/whitehouse.gov/files/images/The%20Underestimated%20Cost%20of%20the%20Opioid%20Crisis.pdf">Council of Economic Advisers to the White House (CEA)</a> under the Trump Administration estimates that in 2015, the economic cost of the opioid crisis was $504.0 billion*, or 2.8 percent of GDP that year. 
+					This is over six times larger than the most recently estimated economic cost of the epidemic.<a href="#cea"><sup>[1]</sup></a></p>
 					<p><span class="italic">*Estimate is based on the economic cost of these deaths using conventional economic estimates for valuing life routinely used by U.S. Federal agencies.</span></p>
 					
-					<p>The council report among other factors prompted the Trump Administration to declare the US Opioid Crisis as a national Public Health Emergency and sign the 
+					<p>The council's report among other factors prompted the Trump Administration to declare the US Opioid Crisis as a national Public Health Emergency and sign the 
 					<a href="https://www.congress.gov/bill/115th-congress/house-bill/2142"> INTERDICT Act</a> on January 10, 2018.</p>
-					<p>Learn <a href="FactSheet.hmtl">more</a> about the history of the Opioids Crisis in America beginning in the early 1860s.</p>
+					<p>Learn <a href="https://www.cnn.com/2017/09/18/health/opioid-crisis-fast-facts/index.html">more</a> about the history of the Opioids Crisis in America beginning in the early 1860s.</p>
 				</div>
 			</div>
 			<div class="row skillset">
 					<div class="col-md-6">
 						<div class="bar-chart-wrapper">
-							<h5 class="bar-chart-text">Percentage of US Opioid Related Overdose Deaths in 2016 <span class="push-right">66.4%</span> <a href="#cnn">[1]</a></h5>
+							<h5 class="bar-chart-text">Percentage of US Opioid Related Overdose Deaths in 2016 <span class="push-right">66.4%</span> <a href="#cnn">[2]</a></h5>
 							<div class="bar-wrapper">
 								<div class="bar" data-percentage="66.4%">
 									<span></span>
@@ -198,7 +169,7 @@
 							</div>
 						</div>
 						<div class="bar-chart-wrapper">
-							<h5 class="bar-chart-text">Percentage of Americans represented from the world's hydrocodone consumption <span class="push-right">99.7%</span> <a href="#cnn">[1]</a></h5>
+							<h5 class="bar-chart-text">Percentage of Americans represented from the world's hydrocodone consumption <span class="push-right">99.7%</span> <a href="#cnn">[2]</a></h5>
 							<div class="bar-wrapper">
 								<div class="bar" data-percentage="99.7%">
 									<span></span>
@@ -208,7 +179,7 @@
 					</div>
 					<div class="col-md-6">
 						<div class="bar-chart-wrapper">
-							<h5 class="bar-chart-text">Percentage of Synthetic Opioid Overdose Deaths in 2016 <span class="push-right">46%</span> <a href="#cnn">[1]</a></h5>
+							<h5 class="bar-chart-text">Percentage of Synthetic Opioid Overdose Deaths in 2016 <span class="push-right">46%</span> <a href="#cnn">[2]</a></h5>
 							<div class="bar-wrapper">
 								<div class="bar" data-percentage="46%">
 									<span></span>
@@ -216,7 +187,7 @@
 							</div>
 						</div>
 						<div class="bar-chart-wrapper">
-							<h5 class="bar-chart-text">Percentage of herion addicts that abused prescription opioids first <span class="push-right">80%</span> <a href="#nih">[2]</a></h5>
+							<h5 class="bar-chart-text">Percentage of heroin addicts that abused prescription opioids first <span class="push-right">80%</span> <a href="#nih">[3]</a></h5>
 							<div class="bar-wrapper">
 								<div class="bar" data-percentage="80%">
 									<span></span>
@@ -224,31 +195,39 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-9"><h5>Sources</h5></div>
-						<div class="col-md-9" id="cnn">
-							<p>[1] <cite>"Opioid Crisis Fast Facts." CNN Health+, CNN, 16 
+					<div class="col-md-12"><h5>Sources</h5></div>
+						<div class="col-md-12" id="cea">
+							<p>[1] <cite>"The Underestimated Cost of the Opioid Crisis." The Council of Ecomomic Advisers, The Whitehouse, Nov. 2017, www.whitehouse.gov.
+							Accessed 29 Sept. 2018. Path: <a href="https://www.whitehouse.gov/sites/whitehouse.gov/files/images/The%20Underestimated%20Cost%20of%20the%20Opioid%20Crisis.pdf">
+							https://www.whitehouse.gov/sites/whitehouse.gov/files/images/The%20Underestimated%20Cost%20of%20the%20Opioid%20Crisis.pdf.</a></cite>
+							</p>
+						</div>		
+						<div class="col-md-12" id="cnn">
+							<p>[2] <cite>"Opioid Crisis Fast Facts." CNN Health+, CNN, 16 
 							June 2018, www.cnn.com/2017/09/18/health/opioid-crisis-fast-facts/
 							index.html. Accessed 8 Oct. 2018. Path: <a href="https://www.cnn.com/2017/09/
 							18/health/opioid-crisis-fast-facts/index.html">https://www.cnn.com/2017/09/18/health/opioid-crisis-fast-facts/index.html.</a></cite>
 							</p>
 						</div>	
-						<div class="col-md-9" id="nih">
-							<p>[2] <cite>"Prescripton Opioid Use is a Risk Factor for Heroin Use." 
-							National Institute on Drug Abuse, National Institute on Drug Abuse: 
-							NIH, Jan. 2018, drugabuse.gov/. Accessed 8 Oct. 2018. Path: <a href="https://drugabuse.gov/publications/
+						<div class="col-md-12" id="nih">
+							<p>[3] <cite>"Prescripton Opioid Use is a Risk Factor for Heroin Use." 
+							National Institute on Drug Abuse Research Report, National Institute on Drug Abuse: 
+							NIH, Jan. 2018, www.drugabuse.gov/. Accessed 8 Oct. 2018. Path: <a href="https://drugabuse.gov/publications/
 							research-reports/relationship-between-prescription-drug-heroin-abuse/prescription-opioid-use-
 							risk-factor-heroin-use">https://drugabuse.gov/publications/
 							research-reports/relationship-between-prescription-drug-heroin-abuse/prescription-opioid-use-risk-factor-heroin-use.</a></cite>
 							</p>
 						</div>
 					</div>
+					<div class="is-centered">
+							<a href="#ourstory" class="btn secondary view-more">To Our Purpose</a>
+						</div>
 			</div>
-	
+		</div>
 	</section>
-	<!-- END SECTION: Intro -->
-
-
-	<!-- SECTION: Our Story -->
+	<!-- END SECTION: Backstory -->
+	
+	<!-- SECTION: Our Purpose -->
 	<section class="crew has-padding alternate-bg" id="ourstory">
 			<div class="container">
 				<div class="row">
@@ -256,13 +235,20 @@
 						<h4>Our Purpose</h4>
 					</div>
 					<div class="col-md-9">
-						<p>Since 1999, the death rate due to drug overdoses in the United States has increased exponentially. In January 2018, the White House officially declared the Opioid Crisis a national emergency. We have depicted this rise in death rates due to drug overdoses over the last 20 years, filtering by gender and opioid type. In that time frame, we have also identified the states with the greatest and least death rate per year and overall. In developing this project, our purpose is to educate Americans with these visualizations. We hope that policy makers, activists, and concerned citizens can use these visualizations to develop solutions to tackle this issue.</p>
+						<p>Since 1999, the death rate due to drug overdoses in the United States has increased exponentially. In January 2018, the White House officially declared the Opioid Crisis a national Public Health Emergency.</p>
+						
 						</div>
+						<p>We have depicted this rise in death rates due to drug overdoses over the last 20 years, filtering by gender and opioid type. In that time frame, we have also identified the states with the greatest and least death rate per year and overall.</p>
+						<p>In developing this project, our purpose is to educate Americans with these visualizations. We hope that policy makers, activists, and concerned citizens can use these visualizations to develop solutions to tackle this issue.</p>
 					</div>
+					<div class="is-centered">
+							<a href="#team" class="btn secondary view-more">To Our Team</a>
+						</div>
 				</div>
+				
 			</div>
 		</section>
-		<!-- END SECTION: Our Story -->
+		<!-- END SECTION: Our Purpose -->
 	
 	<!-- SECTION: Team -->
 	<section class="crew has-padding" id="team">
@@ -292,6 +278,24 @@
 					</article>
 				</div>
 				<div class="col-md-4 nopadding">
+						<article class="crew-member" style="background-image: url(../static/img/tribble7.jpg)">
+							<figure>
+								<figcaption class="overlay">
+									<h2>Eric Cooney</h2>
+									<p></p>
+									<div class="crew-socials">
+										<ul>
+											<li><a href="https://github.com/eric11235"><i class="fa fa-github"></i></a>
+											</li>
+											<li><a href="https://www.linkedin.com/in/eric-cooney-75b4164"><i class="fa fa-linkedin"></i></a>
+											</li>
+										</ul>
+									</div>
+								</figcaption>
+							</figure>
+						</article>
+					</div>
+				<div class="col-md-4 nopadding">
 					<article class="crew-member" style="background-image: url(../static/img/tribble3.jpg)">
 						<figure>
 							<figcaption class="overlay">
@@ -309,24 +313,7 @@
 						</figure>
 					</article>
 				</div>
-				<div class="col-md-4 nopadding">
-					<article class="crew-member" style="background-image: url(../static/img/tribble7.jpg)">
-						<figure>
-							<figcaption class="overlay">
-								<h2>James "Bill" Cooney</h2>
-								<p></p>
-								<div class="crew-socials">
-									<ul>
-										<li><a href="#"><i class="fa fa-github"></i></a>
-										</li>
-										<li><a href="#"><i class="fa fa-linkedin"></i></a>
-										</li>
-									</ul>
-								</div>
-							</figcaption>
-						</figure>
-					</article>
-				</div>
+				
 				<div class="col-md-4 nopadding">
 					<article class="crew-member" style="background-image: url('../static/img/tribble5.jpg')">
 						<figure>
@@ -366,7 +353,7 @@
 						</article>
 				</div>
 				<div class="col-md-4 nopadding">
-						<article class="crew-member" style="background-image: url('../static/img/tribble6.1.jpg')">
+						<article class="crew-member" style="background-image: url('../static/img/tribble6.jpg')">
 							<figure>
 								<figcaption class="overlay">
 									<h2>Yurora Saylor</h2>
@@ -384,20 +371,55 @@
 							</figure>
 						</article>
 				</div>
+				
 			</div>
 		</div>
 	</section>
 	<!-- END SECTION: Crew -->
 
-	<!-- SECTION: Visualzations -->
-	<section class="freebies has-padding" id="freebies">
+	<!-- SECTION: Stats-->
+	<div class="stats has-padding-tall">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 stats-container">
+					<i class="icon icon-List"></i>
+					<div class="stats-wrapper">
+						<p class="stats-number" data-stop="1">1</p>
+						<p class="stats-text">sqlite Database</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 stats-container">
+					<i class="icon icon-Book"></i>
+					<div class="stats-wrapper">
+						<p class="stats-number" data-stop="2">2</p>
+						<p class="stats-text">JS Libraries</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 stats-container">
+					<i class="icon icon-ChartUp"></i>
+					<div class="stats-wrapper">
+						<p class="stats-number" data-stop="3">3</p>
+						<p class="stats-text">Visuals</p>
+					</div>
+					
+				</div>
+				<div class="is-centered">
+						<a href="#graphs" class="btn secondary view-more">To Visualizations</a>
+					</div>
+			</div>
+		</div>
+	</div>
+	<!-- END SECTION: Stats -->
+
+	<!-- SECTION: Visualizations -->
+	<section class="freebies has-padding" id="graphs">
 		<div class="container freebies-intro">
 			<div class="row">
 				<div class="col-md-12">
-					<h4>Data Sources</h4>
+					<h4>Visualizations</h4>
 				</div>
 			</div>
-			<div class="row">
+			<!--<div class="row">
 				<div class="col-md-12 content-left">
 					<p>[1]National data:
 					<a href="https://www.drugabuse.gov/related-topics/trends-statistics/overdose-death-rates"> https://www.drugabuse.gov/related-topics/trends-statistics/overdose-death-rates</a></p>
@@ -406,7 +428,7 @@
 					<p>[3]White House study:
 					<a href="https://www.whitehouse.gov/sites/whitehouse.gov/files/images/The%20Underestimated%20Cost%20of%20the%20Opioid%20Crisis.pdf">https://www.whitehouse.gov/sites/whitehouse.gov/files/images/The%20Underestimated%20Cost%20of%20the%20Opioid%20Crisis.pdf</a></p>
 				</div>
-			</div>
+			</div>-->
 		</div>
 		<div class="container-fluid" id="graphs">
 			<div class="row">
@@ -414,7 +436,7 @@
 					<article class="item wp5">
 						<figure class="has-overlay">
 							<figcaption class="overlay">
-								<div class="like-share-wrapper">
+								<!--<div class="like-share-wrapper">
 									<ul>
 										<li>
 											<div class="like-button-wrapper">
@@ -423,15 +445,15 @@
 											</div>
 										</li>
 									</ul>
-								</div>
+								</div>-->
 								<div class="freebie-content">
-									<h2>US Overdose deaths</h2>
+									<h2>US Drug Overdose Deaths vs Death Rates</h2>
 									<div class="group">
 										<a href="/US_OD.html" class="btn secondary">View</a>
 									</div>
 								</div>
 							</figcaption>
-							<img src="../static/img/us_flag.jpg" alt="Sedna Freebie">
+							<img src="../static/img/us_flag.jpg" alt="Drug Death Image">
 						</figure>
 					</article>
 				</div>
@@ -439,7 +461,7 @@
 					<article class="item wp6">
 						<figure class="has-overlay">
 							<figcaption class="overlay">
-								<div class="like-share-wrapper">
+								<!--<div class="like-share-wrapper">
 									<ul>
 										<li>
 											<div class="like-button-wrapper">
@@ -448,15 +470,15 @@
 											</div>
 										</li>
 									</ul>
-								</div>
+								</div>-->
 								<div class="freebie-content">
-									<h2>US Opioid deaths</h2>
+									<h2>US Opioid Related Overdose Deaths vs Death Rates</h2>
 									<div class="group">
 										<a href="/US_OP.html" class="btn secondary">View</a>
 									</div>
 								</div>
 							</figcaption>
-							<img src="../static/img/OPCrisis.jpg" alt="Land.io Freebie">
+							<img src="../static/img/rxip.jpg" alt="Opioid Epidemic Cartoon published May 2, 2016 by Adam Zyglis politicalcartoons.com">
 						</figure>
 					</article>
 				</div>
@@ -466,7 +488,7 @@
 					<article class="item wp7">
 						<figure class="has-overlay">
 							<figcaption class="overlay">
-								<div class="like-share-wrapper">
+								<!--<div class="like-share-wrapper">
 									<ul>
 										<li>
 											<div class="like-button-wrapper">
@@ -475,15 +497,15 @@
 											</div>
 										</li>
 									</ul>
-								</div>
+								</div>-->
 								<div class="freebie-content">
-									<h2>Map of USA</h2>
+									<h2>US Drug Overdose Death Rates Map</h2>
 									<div class="group">
 										<a href="states_map.html" class="btn secondary">View</a>
 									</div>
 								</div>
 							</figcaption>
-							<img src="../static/img/spoonflag.jpg" alt="Synthetica Freebie">
+							<img src="../static/img/pill_nation.jpg" alt="Map of US Image" width="890" height="90">
 						</figure>
 					</article>
 				</div>
@@ -491,7 +513,7 @@
 					<article class="item wp8">
 						<figure class="has-overlay">
 							<figcaption class="overlay">
-								<div class="like-share-wrapper">
+								<!--<div class="like-share-wrapper">
 									<ul>
 										<li>
 											<div class="like-button-wrapper">
@@ -500,7 +522,7 @@
 											</div>
 										</li>
 									</ul>
-								</div>
+								</div>-->
 								<div class="freebie-content">
 									<h2>Raw Data</h2>
 									<div class="group">
@@ -508,17 +530,19 @@
 									</div>
 								</div>
 							</figcaption>
-							<img src="../static/img/physical-data.jpg" alt="Synthetica">
+							<img src="../static/img/physical-data.jpg" alt="Raw Data Image">
 						</figure>
 					</article>
 				</div>
 				<div class="is-centered">
-					<a href="#intro" class="btn secondary view-more">Back to Top</a>
+					<a href="#logo" class="btn secondary view-more">Back To Top</a>
 				</div>
 			</div>
 		</div>
 	</section>
+	<!-- END SECTION: Visualizations -->
 	
+	<!-- SECTION: Footer -->
 	<footer class="has-padding footer-bg">
 		<div class="container">
 			<div class="row">
@@ -531,7 +555,7 @@
 				<div class="col-md-12 footer-nav">
 					<ul class="footer-primary-nav">
 						<li><a href="#intro">The Back Story</a></li>
-						<li><a href="#ourstory">Our Story</a></li>
+						<li><a href="#ourstory">Our Purpose</a></li>
 						<li><a href="#graphs">Visualizations</a></li>
 						<li><a href="#team">Our Team</a></li>
 					</ul>
@@ -545,7 +569,7 @@
 						</ul>
 					</div>-->
 					<ul class="footer-secondary-nav">
-						<li><p><span class="italic">Website created using free template designed by <a href="https://tympanus.net/codrops/author/pfinlan/">Peter Finlan</a> and created exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></span></p></li>
+						<li><p><span class="italic">Landing page created using the free Synthetica template designed by <a href="https://tympanus.net/codrops/author/pfinlan/">Peter Finlan</a> and created exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></span></p></li>
 					</ul>
 				</div>
 			</div>
@@ -568,18 +592,25 @@
 	<script src="../static/js/min/jquery.waypoints.min.js"></script>
 	<script src="../static/js/min/flickity.pkgd.min.js"></script>
 	<script src="../static/js/min/scripts-min.js"></script>
-
-	
-<script>
-$(window).scroll(function() {
-    var winScrollTop = $(window).scrollTop();
-    var winHeight = $(window).height();
-    var floaterHeight = $('#floater').outerHeight(true);
-    var fromBottom = 20;
-    var top = winScrollTop + winHeight - floaterHeight - fromBottom - 200;
-	$('#floater').css({'top': top + 'px'});
-});
-</script>
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID and uncomment -->
+	<!--
+	<script>
+	(function(b, o, i, l, e, r) {
+		b.GoogleAnalyticsObject = l;
+		b[l] || (b[l] =
+			function() {
+				(b[l].q = b[l].q || []).push(arguments)
+			});
+		b[l].l = +new Date;
+		e = o.createElement(i);
+		r = o.getElementsByTagName(i)[0];
+		e.src = '//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e, r)
+	}(window, document, 'script', 'ga'));
+	ga('create', 'UA-XXXXX-X', 'auto');
+	ga('send', 'pageview');
+	</script>
+	-->
 </body>
 
 </html>
