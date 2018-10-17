@@ -100,6 +100,11 @@ function build_OD_Chart() {
           ticks:{
             beginAtZero: true,
           },
+          scaleLabel: {
+            display: true,
+            labelString: 'Years',
+            fontsize: 11,
+          }
         }],
         yAxes: [{
           id:"A",

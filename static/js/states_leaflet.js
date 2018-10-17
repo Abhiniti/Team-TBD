@@ -34,8 +34,6 @@ function buildMap(year) {
 		}
 	}
 
-
-
 //MAX and MIN RATES
 var RatesArr = new Array;
 for (var i = 0; i < d.year.length; i++){
@@ -58,11 +56,8 @@ for (var i = 0; i < d.year.length; i++){
 			minState = abbrState(d.state[i], 'name');
 		}
 	}
-document.getElementById("statsYear").innerHTML = "";
 document.getElementById("greatestRate").innerHTML = "";
 document.getElementById("smallestRate").innerHTML = "";
-
-document.getElementById("statsYear").innerHTML = "STATISTICS IN YEAR " + intVar;
 document.getElementById("greatestRate").innerHTML = "State with greatest death rate: <u>" + maxState + "</u> (" + maxRate + ")";
 document.getElementById("smallestRate").innerHTML = "State with smallest death rate: <u>" + minState + "</u> (" + minRate + ")";
 
