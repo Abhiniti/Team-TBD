@@ -27,6 +27,8 @@ function build_OP_Chart() {
  //Assign variables for both Male & Female Fentanyl Deaths
  var y1_Both_Fentanyl = op.Both_Fentanyl;
 
+ //Assign variables for both Male & Female Opium & Other Deaths
+ var y1_Both_Opium_Other = op.Both_Opium_Other; 
 
  //Line Chart Coordinates - Y2 Axis (Opioid Related Death Rates)
  //=============================================================
@@ -60,109 +62,109 @@ function build_OP_Chart() {
      data:{
        labels: years,
        datasets:[{
-        type: 'bar', 
-        label:'Total Opioid Deaths',
-        yAxisID: 'y-axis-1',
-        data: y1_Both_Opiods,
-        backgroundColor:'rgba(217,83,79,0.4)',
-        borderWidth:1,
-        hoverBorderWidth:2,
-        hoverBorderColor:'#000'  
+            type: 'bar', 
+            label:'Pres. Opioid Deaths',
+            yAxisID: 'y-axis-1',
+            data: y1_Both_Prescr_Opiods,
+            backgroundColor:'rgba(255, 255, 0,0.4)',
+            borderWidth:1,
+            hoverBorderWidth:2,
+            hoverBorderColor:'#000' 
         
-      }, {
-        type: 'bar', 
-        label:'Total Prescrip Opioid Deaths',
-        yAxisID: 'y-axis-1',
-        data: y1_Both_Prescr_Opiods,
-        backgroundColor:'rgba(255, 255, 0,0.4)',
-        borderWidth:1,
-        hoverBorderWidth:2,
-        hoverBorderColor:'#000' 
-    
-      }, {
-          type:'bar',
-          label:'Total Heroin Deaths',
-          yAxisID: 'y-axis-1',
-          data: y1_Both_Heroin,
-          backgroundColor:'rgba(51, 102, 255,0.4)',
-          borderWidth:1,
-          hoverBorderWidth:2,
-          hoverBorderColor:'#000'
-        
-      }, {
-          type: 'bar',
-          label:'Total Fentanyl Deaths',
-          yAxisID: 'y-axis-1',
-          data: y1_Both_Fentanyl,
-          backgroundColor:'rgba(102, 0, 102,0.4)',
-          borderWidth:1,
-          hoverBorderWidth:2,
-          hoverBorderColor:'#000'
-      
-      }, {
-        type: 'line',
-        label:'Total Opioid DR',
-        yAxisID: 'y-axis-2',
-        data: y2_Any_Opiod_DR,
-        backgroundColor:'rgba(153, 255, 51,1)',
-        borderWidth:3,
-        borderColor:'#99ff33',
-        fill:false,
-        pointStyle: 'star',
-        pointHoverBorderColor: '#99ff33',
-        pointHoverBackgroundColor: '#99ff33',
-        pointHoverBorderWidth: 3,
-        pointHoverRadius: 10,
-        pointBorderWidth: 3
+          }, {
+              type:'bar',
+              label:'Heroin Deaths',
+              yAxisID: 'y-axis-1',
+              data: y1_Both_Heroin,
+              backgroundColor:'rgba(51, 102, 255,0.4)',
+              borderWidth:1,
+              hoverBorderWidth:2,
+              hoverBorderColor:'#000'
+            
+          }, {
+              type: 'bar',
+              label:'Fentanyl Deaths',
+              yAxisID: 'y-axis-1',
+              data: y1_Both_Fentanyl,
+              backgroundColor:'rgba(102, 0, 102,0.4)',
+              borderWidth:1,
+              hoverBorderWidth:2,
+              hoverBorderColor:'#000'
+          
+          }, {
+              type: 'bar', 
+              label:'Opium & Other Deaths',
+              yAxisID: 'y-axis-1',
+              data: y1_Both_Opium_Other,
+              backgroundColor:'rgba(217,83,79,0.4)',
+              borderWidth:1,
+              hoverBorderWidth:2,
+              hoverBorderColor:'#000'  
+              
+          }, {
+            type: 'line',
+            label:'Total Opioid DR',
+            yAxisID: 'y-axis-2',
+            data: y2_Any_Opiod_DR,
+            backgroundColor:'rgba(153, 255, 51,1)',
+            borderWidth:3,
+            borderColor:'#99ff33',
+            fill:false,
+            pointStyle: 'star',
+            pointHoverBorderColor: '#99ff33',
+            pointHoverBackgroundColor: '#99ff33',
+            pointHoverBorderWidth: 3,
+            pointHoverRadius: 10,
+            pointBorderWidth: 3
 
-      }, {
-          type: 'line',
-          label:'Total Prescrip Opioid DR',
-          yAxisID: 'y-axis-2',
-          data: y2_Prescr_Opiods_DR,
-          backgroundColor:'rgba(128, 0, 0,1)',
-          fill: false,
-          borderWidth:3,
-          borderColor:'#800000',
-          pointStyle: 'rectRot',
-          pointHoverBorderColor: '#800000',
-          pointHoverBackgroundColor: '#800000',
-          pointHoverBorderWidth: 3,
-          pointHoverRadius: 10,
-          pointBorderWidth: 3
-       
-      }, {
-          type: 'line',
-          label:'Total Heroin DR',
-          yAxisID: 'y-axis-2',
-          data: y2_Heroin_DR,
-          backgroundColor:'rgba(51, 51, 204,1)',
-          fill: false,
-          borderWidth:3,
-          borderColor:'#3333cc',
-          pointStyle: 'circle',
-          pointHoverBorderColor: '#3333cc',
-          pointHoverBackgroundColor: '#3333cc',
-          pointHoverBorderWidth: 3,
-          pointHoverRadius: 10,
-          pointBorderWidth: 3
-        
-      }, {
-          type: 'line',
-          label:'Total Fentanyl DR',
-          yAxisID: 'y-axis-2',
-          data: y2_Fentanyl_DR,
-          backgroundColor:'rgba(204, 51, 0,1)',
-          fill: false,
-          borderWidth:3,
-          borderColor:'#cc3300',
-          pointStyle: 'crossRot',
-          pointHoverBorderColor: '#cc3300',
-          pointHoverBackgroundColor: '#cc3300',
-          pointHoverBorderWidth: 3,
-          pointHoverRadius: 10,
-          pointBorderWidth: 3
-     }]
+          }, {
+              type: 'line',
+              label:'Pres. Opioid DR',
+              yAxisID: 'y-axis-2',
+              data: y2_Prescr_Opiods_DR,
+              backgroundColor:'rgba(128, 0, 0,1)',
+              fill: false,
+              borderWidth:3,
+              borderColor:'#800000',
+              pointStyle: 'rectRot',
+              pointHoverBorderColor: '#800000',
+              pointHoverBackgroundColor: '#800000',
+              pointHoverBorderWidth: 3,
+              pointHoverRadius: 10,
+              pointBorderWidth: 3
+          
+          }, {
+              type: 'line',
+              label:'Heroin DR',
+              yAxisID: 'y-axis-2',
+              data: y2_Heroin_DR,
+              backgroundColor:'rgba(51, 51, 204,1)',
+              fill: false,
+              borderWidth:3,
+              borderColor:'#3333cc',
+              pointStyle: 'circle',
+              pointHoverBorderColor: '#3333cc',
+              pointHoverBackgroundColor: '#3333cc',
+              pointHoverBorderWidth: 3,
+              pointHoverRadius: 10,
+              pointBorderWidth: 3
+            
+          }, {
+              type: 'line',
+              label:'Fentanyl DR',
+              yAxisID: 'y-axis-2',
+              data: y2_Fentanyl_DR,
+              backgroundColor:'rgba(204, 51, 0,1)',
+              fill: false,
+              borderWidth:3,
+              borderColor:'#cc3300',
+              pointStyle: 'crossRot',
+              pointHoverBorderColor: '#cc3300',
+              pointHoverBackgroundColor: '#cc3300',
+              pointHoverBorderWidth: 3,
+              pointHoverRadius: 10,
+              pointBorderWidth: 3
+        }]
       },
      options: {
        title:{
@@ -272,6 +274,9 @@ function build_Male_Chart() {
  //Assign variables for Male Fentanyl Deaths
  var y1_M_Fentanyl = op.M_Fentanyl;
 
+ //Assign variables for Male Opium & Other Deaths
+ var y1_M_Opium_Other = op.M_Opium_Other; 
+
  //Line Chart Coordinates - Y2 Axis (Opioid Related Death Rates)
  //=============================================================
  //Assign variables for both Male & Female Opioid Death Rates
@@ -304,64 +309,64 @@ function build_Male_Chart() {
      data:{
        labels: years,
        datasets:[{
-        type: 'bar', 
-        label:'Total Male Opioid Deaths',
-        yAxisID: 'y-axis-1',
-        data: y1_M_Opiods,
-        backgroundColor:'rgba(217,83,79,0.4)',
-        borderWidth:1,
-        hoverBorderWidth:2,
-        hoverBorderColor:'#000'  
-        
-      }, {
-        type: 'bar', 
-        label:'Total Male Prescrip Opioid Deaths',
-        yAxisID: 'y-axis-1',
-        data: y1_M_Prescr_Opiods,
-        backgroundColor:'rgba(255, 255, 0,0.4)',
-        borderWidth:1,
-        hoverBorderWidth:2,
-        hoverBorderColor:'#000' 
-    
-      }, {
+          type: 'bar', 
+          label:'Male Pres. Opioid Deaths',
+          yAxisID: 'y-axis-1',
+          data: y1_M_Prescr_Opiods,
+          backgroundColor:'rgba(255, 255, 0,0.4)',
+          borderWidth:1,
+          hoverBorderWidth:2,
+          hoverBorderColor:'#000'    
+          
+          }, {
           type:'bar',
-          label:'Total Male Heroin Deaths',
+          label:'Male Heroin',
           yAxisID: 'y-axis-1',
           data: y1_M_Heroin,
           backgroundColor:'rgba(51, 102, 255,0.4)',
           borderWidth:1,
           hoverBorderWidth:2,
-          hoverBorderColor:'#000'
-        
-      }, {
+          hoverBorderColor:'#000'          
+          
+          }, {
           type: 'bar',
-          label:'Total Male Fentanyl Deaths',
+          label:'Male Fentanyl',
           yAxisID: 'y-axis-1',
           data: y1_M_Fentanyl,
           backgroundColor:'rgba(102, 0, 102,0.4)',
           borderWidth:1,
           hoverBorderWidth:2,
           hoverBorderColor:'#000'
-      
-      }, {
-        type: 'line',
-        label:'Total Opioid DR',
-        yAxisID: 'y-axis-2',
-        data: y2_Any_Opiod_DR,
-        backgroundColor:'rgba(153, 255, 51,1)',
-        borderWidth:3,
-        borderColor:'#99ff33',
-        fill:false,
-        pointStyle: 'star',
-        pointHoverBorderColor: '#99ff33',
-        pointHoverBackgroundColor: '#99ff33',
-        pointHoverBorderWidth: 3,
-        pointHoverRadius: 10,
-        pointBorderWidth: 3
-
-      }, {
+          
+          }, {
+          type: 'bar', 
+          label:'Male Opium & Other',
+          yAxisID: 'y-axis-1',
+          data: y1_M_Opium_Other,
+          backgroundColor:'rgba(217,83,79,0.4)',
+          borderWidth:1,
+          hoverBorderWidth:2,
+          hoverBorderColor:'#000'  
+          
+          }, {
           type: 'line',
-          label:'Total Prescrip Opioid DR',
+          label:'Total Opioid DR',
+          yAxisID: 'y-axis-2',
+          data: y2_Any_Opiod_DR,
+          backgroundColor:'rgba(153, 255, 51,1)',
+          borderWidth:3,
+          borderColor:'#99ff33',
+          fill:false,
+          pointStyle: 'star',
+          pointHoverBorderColor: '#99ff33',
+          pointHoverBackgroundColor: '#99ff33',
+          pointHoverBorderWidth: 3,
+          pointHoverRadius: 10,
+          pointBorderWidth: 3
+
+          }, {
+          type: 'line',
+          label:'Pres. Opioid DR',
           yAxisID: 'y-axis-2',
           data: y2_Prescr_Opiods_DR,
           backgroundColor:'rgba(128, 0, 0,1)',
@@ -374,10 +379,10 @@ function build_Male_Chart() {
           pointHoverBorderWidth: 3,
           pointHoverRadius: 10,
           pointBorderWidth: 3
-       
-      }, {
+          
+          }, {
           type: 'line',
-          label:'Total Heroin DR',
+          label:'Heroin DR',
           yAxisID: 'y-axis-2',
           data: y2_Heroin_DR,
           backgroundColor:'rgba(51, 51, 204,1)',
@@ -390,10 +395,10 @@ function build_Male_Chart() {
           pointHoverBorderWidth: 3,
           pointHoverRadius: 10,
           pointBorderWidth: 3
-        
-      }, {
+            
+          }, {
           type: 'line',
-          label:'Total Fentanyl DR',
+          label:'Fentanyl DR',
           yAxisID: 'y-axis-2',
           data: y2_Fentanyl_DR,
           backgroundColor:'rgba(204, 51, 0,1)',
@@ -406,7 +411,7 @@ function build_Male_Chart() {
           pointHoverBorderWidth: 3,
           pointHoverRadius: 10,
           pointBorderWidth: 3
-     }]
+        }]
       },
      options: {
        title:{
@@ -431,57 +436,57 @@ function build_Male_Chart() {
            right:0,
            bottom:0,
            top:0
-         }
-       },
-       tooltips:{
-        enabled:true,
-        mode: 'index',
-        position: 'average',
-        caretPadding: 20,
-        intersect: true,
-       },
-       scales: {
-        xAxes: [{
-          stacked: true,
-          ticks:{
-            beginAtZero: true,
-          },
-          scaleLabel: {
-            display: true,
-            labelString: 'Years',
-            fontsize: 11,
           }
-        }],
-        yAxes: [{
-          type:'linear',
-          stacked: true,
-          position: 'left',
-          id: 'y-axis-1',
-          ticks:{
-              callback: function(label, index, labels) {
-                  return label/1000+'k';
+        },
+        tooltips:{
+          enabled:true,
+          mode: 'index',
+          position: 'average',
+          caretPadding: 20,
+          intersect: true,
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            ticks:{
+              beginAtZero: true,
             },
-            beginAtZero: true,
-          },
-          scaleLabel:{
-            display: true,
-            labelString: 'Total Number of US Opioid Related Deaths',
-            fontsize: 11,
-          }
-        
-      }, {
-          type: 'linear',
-          stacked: false,
-          position: 'right',
-          id: 'y-axis-2',
-          scaleLabel:{
-            display: true,
-            labelString: 'US Opioid Related Death Rates (per 100,000 people)',
-            fontsize: 11,
-          }
-        }]
+            scaleLabel: {
+              display: true,
+              labelString: 'Years',
+              fontsize: 11,
+            }
+          }],
+          yAxes: [{
+            type:'linear',
+            stacked: true,
+            position: 'left',
+            id: 'y-axis-1',
+            ticks:{
+                callback: function(label, index, labels) {
+                    return label/1000+'k';
+              },
+              beginAtZero: true,
+            },
+            scaleLabel:{
+              display: true,
+              labelString: 'Total Number of US Opioid Related Deaths',
+              fontsize: 11,
+            }
+          
+        }, {
+            type: 'linear',
+            stacked: false,
+            position: 'right',
+            id: 'y-axis-2',
+            scaleLabel:{
+              display: true,
+              labelString: 'US Opioid Related Death Rates (per 100,000 people)',
+              fontsize: 11,
+            }
+          }]
 
-      }
+        }
     }  
   });
 });
@@ -516,6 +521,9 @@ function build_Female_Chart() {
    //Assign variables for Female Fentanyl Deaths
    var y1_F_Fentanyl = op.F_Fentanyl;
   
+   //Assign variables for Female & Opium & Other Deaths
+   var y1_F_Opium_Other = op.F_Opium_Other; 
+
    //Line Chart Coordinates - Y2 Axis (Opioid Related Death Rates)
    //=============================================================
    //Assign variables for both Male & Female Opioid Death Rates
@@ -549,17 +557,7 @@ function build_Female_Chart() {
          labels: years,
          datasets:[{
           type: 'bar', 
-          label:'Total Female Opioid Deaths',
-          yAxisID: 'y-axis-1',
-          data: y1_F_Opiods,
-          backgroundColor:'rgba(217,83,79,0.4)',
-          borderWidth:1,
-          hoverBorderWidth:2,
-          hoverBorderColor:'#000'  
-          
-        }, {
-          type: 'bar', 
-          label:'Total Female Prescrip Opioid Deaths',
+          label:'Female Pres. Opioid Deaths',
           yAxisID: 'y-axis-1',
           data: y1_F_Prescr_Opiods,
           backgroundColor:'rgba(255, 255, 0,0.4)',
@@ -569,7 +567,7 @@ function build_Female_Chart() {
       
         }, {
             type:'bar',
-            label:'Total Female Heroin Deaths',
+            label:'Female Heroin',
             yAxisID: 'y-axis-1',
             data: y1_F_Heroin,
             backgroundColor:'rgba(51, 102, 255,0.4)',
@@ -579,7 +577,7 @@ function build_Female_Chart() {
           
         }, {
             type: 'bar',
-            label:'Total Female Fentanyl Deaths',
+            label:'Female Fentanyl',
             yAxisID: 'y-axis-1',
             data: y1_F_Fentanyl,
             backgroundColor:'rgba(102, 0, 102,0.4)',
@@ -587,6 +585,16 @@ function build_Female_Chart() {
             hoverBorderWidth:2,
             hoverBorderColor:'#000'
         
+        }, {
+          type: 'bar', 
+          label:'Female Opium & Other',
+          yAxisID: 'y-axis-1',
+          data: y1_F_Opium_Other,
+          backgroundColor:'rgba(217,83,79,0.4)',
+          borderWidth:1,
+          hoverBorderWidth:2,
+          hoverBorderColor:'#000'  
+          
         }, {
           type: 'line',
           label:'Total Opioid DR',
@@ -605,7 +613,7 @@ function build_Female_Chart() {
   
         }, {
             type: 'line',
-            label:'Total Prescrip Opioid DR',
+            label:'Prescrip Opioid DR',
             yAxisID: 'y-axis-2',
             data: y2_Prescr_Opiods_DR,
             backgroundColor:'rgba(128, 0, 0,1)',
@@ -621,7 +629,7 @@ function build_Female_Chart() {
          
         }, {
             type: 'line',
-            label:'Total Heroin DR',
+            label:'Heroin DR',
             yAxisID: 'y-axis-2',
             data: y2_Heroin_DR,
             backgroundColor:'rgba(51, 51, 204,1)',
@@ -637,7 +645,7 @@ function build_Female_Chart() {
           
         }, {
             type: 'line',
-            label:'Total Fentanyl DR',
+            label:'Fentanyl DR',
             yAxisID: 'y-axis-2',
             data: y2_Fentanyl_DR,
             backgroundColor:'rgba(204, 51, 0,1)',

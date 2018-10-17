@@ -113,14 +113,17 @@ def data2():
         National.Both_Prescr_Opiods,
         National.Both_Heroin,
         National.Both_Fentanyl,
+        National.Both_Opium_Other,
         National.M_Opiods,
         National.M_Prescr_Opiods,
         National.M_Heroin,
         National.M_Fentanyl,
+        National.M_Opium_Other,
         National.F_Opiods,
         National.F_Prescr_Opiods,
         National.F_Heroin,
-        National.F_Fentanyl
+        National.F_Fentanyl,
+        National.F_Opium_Other
     ]
 
     # These results are for chart 2 - US Opioid Related Overdose Deaths vs Opioid Related Overdose Death Rates
@@ -138,14 +141,17 @@ def data2():
     OP_data["Both_Prescr_Opiods"] = [result[6] for result in results]
     OP_data["Both_Heroin"] = [result[7] for result in results]
     OP_data["Both_Fentanyl"] = [result[8] for result in results]
-    OP_data["M_Opiods"] = [result[9] for result in results]
-    OP_data["M_Prescr_Opiods"] = [result[10] for result in results]
-    OP_data["M_Heroin"] = [result[11] for result in results]
-    OP_data["M_Fentanyl"] = [result[12] for result in results]
-    OP_data["F_Opiods"] = [result[13] for result in results]
-    OP_data["F_Prescr_Opiods"] = [result[14] for result in results]
-    OP_data["F_Heroin"] = [result[15] for result in results]
-    OP_data["F_Fentanyl"] = [result[16] for result in results]
+    OP_data["Both_Opium_Other"] = [result[9] for result in results]
+    OP_data["M_Opiods"] = [result[10] for result in results]
+    OP_data["M_Prescr_Opiods"] = [result[11] for result in results]
+    OP_data["M_Heroin"] = [result[12] for result in results]
+    OP_data["M_Fentanyl"] = [result[13] for result in results]
+    OP_data["M_Opium_Other"] = [result[14] for result in results]
+    OP_data["F_Opiods"] = [result[15] for result in results]
+    OP_data["F_Prescr_Opiods"] = [result[16] for result in results]
+    OP_data["F_Heroin"] = [result[17] for result in results]
+    OP_data["F_Fentanyl"] = [result[18] for result in results]
+    OP_data["F_Opium_Other"] = [result[19] for result in results]
     
     print(OP_data)
     return jsonify(OP_data)
